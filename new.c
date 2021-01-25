@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main(void) {
-  puts("Hello Evy!");
-  puts("It's a beautiful day!");
+  puts("Hello other Allison!");
+  puts("It's another beautiful day!");
   puts("   00        00   ");
   puts("   00        00   ");
   puts("                  ");
