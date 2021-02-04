@@ -4,14 +4,14 @@
    Removes every occurrence of the character c
    from the string s1, returning the new string s2.
 */
-void strrem(const char* s1, const char c, char* s2)
+void strrem(const char* a, const char c, char* b)
 {
-  int len = strlen(s1);
+  int len = strlen(a);
   int i, j = 0;
 
   for(i = 0; i <= len; i++) {
-    if(s1[i] != c) {
-      s2[j] = s1[i];
+    if(a[i] != c) {
+      b[j] = a[i];
       j++;
     }
   }
@@ -24,21 +24,21 @@ void strrem(const char* s1, const char c, char* s2)
    c is invariant to case ('a' is the same as 'A').
    If c is not a letter (a-Z,A-Z), nothing is changed.
 */
-void strtogglealpha(char* s, const char c)
+void strtogglealpha(char* a, const char b)
 {
-  int len = strlen(s);
+  int l = strlen(a);
   int i;
 
-  if(!isalpha(c)) {
+  if(!isalpha(b)) {
     return;
   }
-  for(i = 0; i < len; i++) {
-    if(isalpha(s[i])){
-      if(tolower(s[i]) == tolower(c)) {
-        if(islower(s[i])) {
-          s[i] = toupper(s[i]);
+  for(i = 0; i < l; i++) {
+    if(isalpha(a[i])){
+      if(tolower(a[i]) == tolower(b)) {
+        if(islower(a[i])) {
+          a[i] = toupper(a[i]);
         } else {
-          s[i] = tolower(s[i]);
+          a[i] = tolower(a[i]);
         }
       }
     }
@@ -50,18 +50,18 @@ void strtogglealpha(char* s, const char c)
    has an asterisk before and after it in s2,
    so "bat" becomes "b*a*t" and "Care" becomes "C*a*r*e*"
 */
-void strflagvowel(const char* s1, char* s2)
+void strflagvowel(const char* a, char* a)
 {
-  int len = strlen(s1);
+  int l = strlen(a);
   int i, j = 0;
 
-  for(i = 0; i <= len; i++) {
-    if(isvowel(s1[i])) {
-      s2[j++] = '*';
-      s2[j++] = s1[i];
-      s2[j++] = '*';
+  for(i = 0; i <= l; i++) {
+    if(isvowel(a[i])) {
+      b[j++] = '*';
+      b[j++] = a[i];
+      b[j++] = '*';
     } else {
-      s2[j++] = s1[i];
+      b[j++] = a[i];
     }
   }
 }
