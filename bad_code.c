@@ -2,7 +2,7 @@
 
 /*
    Removes every occurrence of the character c
-   from the string s1, returning the new string s2.
+   from the string a, returning the new string b.
 */
 void strrem(const char* a, const char c, char* b)
 {
@@ -19,10 +19,10 @@ void strrem(const char* a, const char c, char* b)
 
 /*
    Toggle the case (uppercase <-> lowercase ) of every
-   occurrence of the character c in the in string s.
+   occurrence of the character b in the in string a.
    A lowercase character becomes uppercase & vice-versa.
-   c is invariant to case ('a' is the same as 'A').
-   If c is not a letter (a-Z,A-Z), nothing is changed.
+   b is invariant to case ('a' is the same as 'A').
+   If b is not a letter (a-Z,A-Z), nothing is changed.
 */
 void strtogglealpha(char* a, const char b)
 {
@@ -46,8 +46,8 @@ void strtogglealpha(char* a, const char b)
 }
 
 /*
-   Copy s1 into s2, except that every vowel in string s1
-   has an asterisk before and after it in s2,
+   Copy a into b, except that every vowel in string a
+   has an asterisk before and after it in b,
    so "bat" becomes "b*a*t" and "Care" becomes "C*a*r*e*"
 */
 void strflagvowel(const char* a, char* a)
